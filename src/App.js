@@ -1,47 +1,42 @@
 
 
  import React, {useState, useEffect} from 'react';
- import Contacts from './components/contacts';
- //import Posts from './components/posts';
+ //import Contacts from './components/contacts';
+ import Posts from './components/posts';
 
 function App () {
-   //render () {
+  
+/*
+    const [contacts, setcontacts] = useState([])
 
-    const [setdata, setcontacts] = useState('')
-      // return (
       useEffect(() => {
         fetch('http://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
-        .then((data) => setdata(data))
-          .then((contacts) => setcontacts(contacts))
-        .catch(console.log (err))
+        .then((data) => setcontacts(data))
+      
+        .catch(console.log (Error))
       }, [])
-        
-      // )
-      // }
-      // render() {
+        console.log(contacts)
+      
+      
         return (
-          <Contacts contacts={this.state.contacts} />
+          <Contacts contacts={contacts} />
         )
-      // }
+      /** */
+ 
+    const [posts, setposts] = useState([])
 
-      // state = {
-      //   posts: []
-      // }
-      // componentDidMount() {
-      //   fetch('https://jsonplaceholder.typicode.com/posts')
-      //   .then(res => res.json())
-      //   .then((data) => {
-      //     this.setState({ posts: data })
-      //   })
-      //   .catch(console.log)
-      // }
+      useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(res => res.json())
+        .then((data) => setposts(data))
+        
+        .catch(console.log (Error))
+      }, [])
 
-      // render() {
-      //   return (
-      //     <Posts posts={this.state.posts} />
-      //   )
-      // }
+        return (
+          <Posts posts={posts} />
+        )
     
  }
 
